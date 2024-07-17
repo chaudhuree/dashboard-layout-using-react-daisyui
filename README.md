@@ -1,8 +1,15 @@
-# React + Vite
+#### import DrawerComponent in a page and wrap the content in the DrawerComponent
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+```jsx
+import DrawerComponent from "../components/DrawerComponent";
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+export default function Dashboard() {
+  return (
+    <div>
+      <DrawerComponent>
+        <div>Dashboard</div>
+      </DrawerComponent>
+    </div>
+  );
+}
+```
